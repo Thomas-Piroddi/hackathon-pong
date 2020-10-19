@@ -1,0 +1,29 @@
+{
+  "name": "hackathon-pong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeikaFreckelton/hackathon-pong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeikaFreckelton/hackathon-pong/issues"
+  },
+  "homepage": "https://github.com/MeikaFreckelton/hackathon-pong#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mongoose": "^5.10.9",
+    "passport": "^0.4.1"
+  }
+}
