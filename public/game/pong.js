@@ -49,6 +49,8 @@ newY = -2
 
 
 
+
+
 // move mouse functionality
 document.addEventListener("mousemove", movePaddles, false)
 
@@ -119,6 +121,7 @@ function collide (b, p) { //function to calculate if ball collides with
 //         setInterval(newY -= 0.1, 5000)
 //     } 
 // }
+
 
 
 function draw() { // draw function to render everything
@@ -202,11 +205,21 @@ function draw() { // draw function to render everything
 
 }
 
+const startButton = document.getElementById("startSinglePlayer")
+const resetButton = document.getElementById("resetGame")
 
+startButton.addEventListener("click", game)
 
 
 let frames = 10
 
+function game(){
+    resetButton.style = "display: block"
+
+    setInterval(draw, frames)
+
+}
+
 // setInterval(speedIncrease, 3000)
-setInterval(draw, frames) //continuously render draw func
+// setInterval(draw, frames) //continuously render draw func
 
