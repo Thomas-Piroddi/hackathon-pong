@@ -26,6 +26,10 @@ function chat(req, res){
     res.render("chat")
 }
 
+function profile(req, res){
+    res.render("profile")
+}
+
 
 
 
@@ -37,6 +41,7 @@ module.exports = {
     singleplayer,
     instructions,
     leaderboard,
-    chat
+    chat,
+    profile
 
 }

@@ -6,7 +6,8 @@ const {
     singleplayer,
     instructions,
     leaderboard,
-    chat
+    chat,
+    profile
 } = require('../controllers/page_controller')
 const router = express.Router()
 
@@ -32,7 +33,7 @@ router.get("/chat", chat)
 
 
 
-
+router.get("/profile", profile)
 
 
 module.exports = router

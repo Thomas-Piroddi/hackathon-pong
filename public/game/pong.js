@@ -123,6 +123,7 @@ function collide (b, p) { //function to calculate if ball collides with
 
 function draw() { // draw function to render everything
     context.clearRect(0, 0, canvas.width, canvas.height) // continuously clear and update board
+    drawNet()
     drawCircle(ball.x, ball.y, ball.radius, ball.startAngle, ball.endAngle) // draw the ball
     drawRectangle(player.x, player.y, player.width, player.height, "#ff860d") // draw player paddle
     drawRectangle(com.x, com.y, com.width, com.height, "#ff860d") // draw com paddle
