@@ -80,36 +80,36 @@ app.listen(port, () => {
 
 
 // for socket tutorial :
-server.listen(4000, () => {
-    console.log(`server listening on port ${4000}`);
-});
+// server.listen(4000, () => {
+//     console.log(`server listening on port ${4000}`);
+// });
 
-const connections = [null, null]
+// const connections = [null, null]
 
-io.on('connection', socket => {
-    console.log("new WS connection")
+// io.on('connection', socket => {
+//     console.log("new WS connection")
 
-    // find available player number
-    let playerIndex = -1
-    for (const i in connections){
-        if(connections[i] === null){
-            playerIndex = i
-            break
-        }
-    }
+//     // find available player number
+//     let playerIndex = -1
+//     for (const i in connections){
+//         if(connections[i] === null){
+//             playerIndex = i
+//             break
+//         }
+//     }
    
 
-    // tell the connecting client what player number they are
-    socket.emit('player-number', playerIndex)
+//     // tell the connecting client what player number they are
+//     socket.emit('player-number', playerIndex)
 
-    // console.log(`Player ${playerIndex} has connected`)
+//     // console.log(`Player ${playerIndex} has connected`)
 
-    // ignore player 3
-    if (playerIndex === -1) return 
+//     // ignore player 3
+//     if (playerIndex === -1) return 
 
-    connections[playerIndex] = false
+//     connections[playerIndex] = false
 
-    // tell everyone what player num just connected
-    socket.broadcast.emit('player-connection', playerIndex)
+//     // tell everyone what player num just connected
+//     socket.broadcast.emit('player-connection', playerIndex)
 
-})
+// })
