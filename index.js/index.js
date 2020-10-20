@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const usersRoute = require("../routes/users.route");
 const express = require("express");
 const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
 
 //use config module to get the privatekey, if no private key set, end the application
@@ -22,7 +24,5 @@ app.use(express.json());
 //use users route for api/users
 app.use("/api/users", usersRoute);
 
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
 io.on('connection', () => { /* … */ });
 server.listen(3000);
