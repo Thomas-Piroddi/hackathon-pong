@@ -91,7 +91,7 @@ const drawText = (x, y, text, color) => {
 function resetBall(){
     ball.x = canvas.width/2
     ball.y = canvas.height/2
-    ball.speed = 5
+    // ball.speed = 5
 }
 
 function collide (b, p) { //function to calculate if ball collides with 
@@ -136,7 +136,7 @@ function draw() { // draw function to render everything
     ball.x += newX // move ball
     ball.y += newY // ^
 
-    let computerLevel = 0.03 // level of the computer AI - move down to slow it down or up to speed it up
+    let computerLevel = 0.05 // level of the computer AI - move down to slow it down or up to speed it up
     com.y += (ball.y - (com.y + com.height/2)) * computerLevel // movement of com paddle based on com level
     
     
@@ -166,7 +166,7 @@ function draw() { // draw function to render everything
             newX -= 0.1
         } 
         if (Math.sign(newY) == 1){
-            newX += 0.1
+            newY += 0.1
         } else if (Math.sign(newY) == -1){
             newY -= 0.1
         } 
@@ -205,19 +205,30 @@ function draw() { // draw function to render everything
 
 }
 
+
+
 const startButton = document.getElementById("startSinglePlayer")
 const resetButton = document.getElementById("resetGame")
 
+
 startButton.addEventListener("click", game)
+
+resetButton.addEventListener("click", resetGame)
 
 
 let frames = 10
 
 function game(){
     resetButton.style = "display: block"
+    resetButton.style.cursor = "pointer"
 
     setInterval(draw, frames)
 
+}
+
+function resetGame(){
+
+    location.reload()
 }
 
 // setInterval(speedIncrease, 3000)

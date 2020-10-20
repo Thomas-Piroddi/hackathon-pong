@@ -49,13 +49,23 @@ a{
         border: none;
         height: 7vh;
         
-        
 
     }
+    #resetGame{
+        width: 55vw;
+        margin-bottom: 2%;
+        background-color: black;
+        color: white;
+        border: none;
+        height: 7vh;
+        text-align: center;
+        padding: 0.6%;
 
+    }
 }
 #pong{
     margin:0 auto;
+    margin-bottom: 5%;
 }
 
 
