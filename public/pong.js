@@ -37,7 +37,7 @@ let ball = {
     startAngle: 0, 
     endAngle: 2* Math.PI,
     color: "white",
-    speed: 5,
+    // speed: 5,
     velocityX: 5,
     velocityY: 5,
 
@@ -48,7 +48,7 @@ newY = -2
 
 
 
-// add mouse functionality
+// move mouse functionality
 document.addEventListener("mousemove", movePaddles, false)
 
 
@@ -118,7 +118,7 @@ function draw() { // draw function to render everything
     ball.x += newX // move ball
     ball.y += newY // ^
 
-    let computerLevel = 0.03 // level of the computer AI - move down to slow it down or up to speed it up
+    let computerLevel = 0.02 // level of the computer AI - move down to slow it down or up to speed it up
     com.y += (ball.y - (com.y + com.height/2)) * computerLevel // movement of com paddle based on com level
 
     
@@ -133,7 +133,31 @@ function draw() { // draw function to render everything
 
 
     if (collide(ball, playerOrCom)){ // fucntion to change ball angle based on collision
+        // newY =- 0.1
         newX = -newX // turn ball direction around
+        computerLevel += 0.05
+        // console.log(newX)
+        // newX =+ 0.1
+        // console.log(newY, newX)
+        // (newX == 2 ? (newX += 2) : (newX -= 2))
+        // (newY == 2) ? (newY += 2) : (newY -= 2)
+        // console.log(`after: , ${newY}, ${newX}`)
+
+
+        // there is a slight glitch where the ball accidentally 
+        // bounces multiple times and the speed increases dramatically - need to fix 
+        if (Math.sign(newX) == 1) { // increase the speed of the ball 
+            newX += 0.1
+        } else if (Math.sign(newX) == -1){
+            newX -= 0.1
+        } 
+        if (Math.sign(newY) == 1){
+            newX += 0.1
+        } else if (Math.sign(newY) == -1){
+            newY -= 0.1
+        } 
+
+        
  
 
         // code from tutorial to change direction but dont think we really need it : 
@@ -156,7 +180,7 @@ function draw() { // draw function to render everything
         com.score++
         resetBall()
     } else if (ball.x + ball.radius > canvas.width){
-        console.log("hello")
+        // console.log("hello")
         player.score++
         resetBall()
     }
