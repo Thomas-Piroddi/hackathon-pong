@@ -128,10 +128,10 @@ function draw() { // draw function to render everything
     context.clearRect(0, 0, canvas.width, canvas.height) // continuously clear and update board
     drawNet()
     drawCircle(ball.x, ball.y, ball.radius, ball.startAngle, ball.endAngle) // draw the ball
-    drawRectangle(player.x, player.y, player.width, player.height, "#ff860d") // draw player paddle
-    drawRectangle(com.x, com.y, com.width, com.height, "#ff860d") // draw com paddle
-    drawText(canvas.width/2/2, canvas.height/2/2, player.score, "#ff860d") //drae player score
-    drawText(canvas.width/1.5, canvas.height/2/2, com.score, "#ff860d") // draw com score
+    drawRectangle(player.x, player.y, player.width, player.height, "#ff970f") // draw player paddle
+    drawRectangle(com.x, com.y, com.width, com.height, "#ff970f") // draw com paddle
+    drawText(canvas.width/2/2, canvas.height/2/2, player.score, "#ff970f") //drae player score
+    drawText(canvas.width/1.5, canvas.height/2/2, com.score, "#ff970f") // draw com score
     
     ball.x += newX // move ball
     ball.y += newY // ^
@@ -154,21 +154,21 @@ function draw() { // draw function to render everything
     if (collide(ball, playerOrCom)){ // fucntion to change ball angle based on collision
         // newY =- 0.1
         newX = -newX // turn ball direction around
-        computerLevel += 0.05
+        computerLevel += 0.02
         
 
 
         // there is a slight glitch where the ball accidentally 
         // bounces multiple times and the speed increases dramatically - need to fix 
         if (Math.sign(newX) == 1) { // increase the speed of the ball 
-            newX += 0.1
+            newX += 0.02
         } else if (Math.sign(newX) == -1){
-            newX -= 0.1
+            newX -= 0.02
         } 
         if (Math.sign(newY) == 1){
-            newY += 0.1
+            newY += 0.02
         } else if (Math.sign(newY) == -1){
-            newY -= 0.1
+            newY -= 0.02
         } 
 
         
