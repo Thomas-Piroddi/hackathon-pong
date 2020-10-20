@@ -15,7 +15,7 @@ if (!config.get("myprivatekey")) {
 
 //connect to mongodb
 mongoose
-  .connect("mongodb://localhost/nodejsauth", { useNewUrlParser: true })
+  .connect("mongodb://localhost/5500", { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB..."))
   .catch(err => console.error("Could not connect to MongoDB..."));
 
@@ -26,3 +26,10 @@ app.use("/api/users", usersRoute);
 
 io.on('connection', () => { /* … */ });
 server.listen(3000);
+
+<div id="btns">
+<div id="first-row">
+<button id="event-btn" class="button" onclick="callEventsApi(day, month)" disabled>Log out</button>
+<button id="clear-btn" class="button" onclick="clearBtn()">Clear</button>
+</div>
+</div>
