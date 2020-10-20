@@ -21,6 +21,7 @@ const passport = require('passport')
 const port = 3000
 
 
+app.use(express.static('public'))
 
 const pageRouter = require('./routes/page_routes')
 
