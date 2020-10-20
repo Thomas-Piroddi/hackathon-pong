@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let playerNum = 0
     let currentPlayer = "player1"
-    const startButton = document.querySelector("#startButton")
+    const startButton = document.getElementById("start")
     
 
     const multiPlayerButton = document.querySelector("#multiPlayerButton")
@@ -17,15 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         startButton.addEventListener('click', game)
 
         socket.on('player-number', num => {
-            if (num === -1){
+            if (num == -1){
                 infoDisplay.innerHTML = "Sorry the server is full"
             } else {
                 playerNum = parseInt(num)
-                if (playerNum === 1 ) currentPlayer = "player2"
+                if (playerNum == 1 ) currentPlayer = "player2"
                 console.log(playerNum)
             }
         })
-
 
         // another player has connected or disconnected
         socket.on('player-connection', num => {

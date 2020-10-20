@@ -102,10 +102,10 @@ io.on('connection', socket => {
     // tell the connecting client what player number they are
     socket.emit('player-number', playerIndex)
 
-    console.log(`Player ${playerIndex} has connected`)
+    // console.log(`Player ${playerIndex} has connected`)
 
     // ignore player 3
-    if (playerIndex === -1) return
+    if (playerIndex === -1) return 
 
     connections[playerIndex] = false
 
