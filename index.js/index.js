@@ -1,8 +1,10 @@
 const config = require("config");
 const mongoose = require("mongoose");
-const usersRoute = require("./routes/user.route");
+const usersRoute = require("../routes/users.route");
 const express = require("express");
 const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
 
 //use config module to get the privatekey, if no private key set, end the application
@@ -22,24 +24,5 @@ app.use(express.json());
 //use users route for api/users
 app.use("/api/users", usersRoute);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
-
-var io = require('socket.io')(serv,{});
-io.sockets.on('connection', function(socket){
-	socket.id = Math.random();
-	SOCKET_LIST[socket.id] = socket;
- 
-	Player.onConnect(socket);
- 
-	socket.on('disconnect',function(){
-		delete SOCKET_LIST[socket.id];
-		Player.onDisconnect(socket);
-	});
-	socket.on('sendMsgToServer',function(data){
-		var playerName = ("" + socket.id).slice(2,7);
-		for(var i in SOCKET_LIST){
-			SOCKET_LIST[i].emit('addToChat',playerName + ': ' + data);
-		}
-	});
-});
+io.on('connection', () => { /* … */ });
+server.listen(3000);
