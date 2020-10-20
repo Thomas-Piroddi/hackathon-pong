@@ -5,7 +5,8 @@ const {
     multiplayer,
     singleplayer,
     instructions,
-    leaderboard
+    leaderboard,
+    chat
 } = require('../controllers/page_controller')
 const router = express.Router()
 
@@ -27,7 +28,7 @@ router.get("/instructions", instructions)
 // leaderboard
 router.get("/leaderboard", leaderboard)
 
-
+router.get("/chat", chat)
 
 
 
