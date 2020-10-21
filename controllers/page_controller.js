@@ -22,6 +22,14 @@ function leaderboard(req, res) {
     res.render("leaderboard")
 }
 
+function chat(req, res){
+    res.render("chat")
+}
+
+function profile(req, res){
+    res.render("profile")
+}
+
 
 
 
@@ -32,6 +40,8 @@ module.exports = {
     multiplayer, 
     singleplayer,
     instructions,
-    leaderboard
+    leaderboard,
+    chat,
+    profile
 
 }

@@ -27,9 +27,9 @@ app.use("/api/users", usersRoute);
 io.on('connection', () => { /* … */ });
 server.listen(3000);
 
-<div id="btns">
+{/* <div id="btns">
 <div id="first-row">
 <button id="event-btn" class="button" onclick="callEventsApi(day, month)" disabled>Log out</button>
 <button id="clear-btn" class="button" onclick="clearBtn()">Clear</button>
 </div>
-</div>
+</div> */}

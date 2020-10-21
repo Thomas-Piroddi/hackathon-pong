@@ -1,0 +1,205 @@
+a {
+  color: #ff970f;
+}
+
+.navbar {
+  background-color: rgba(255, 151, 15, 0.85);
+}
+
+.navbar .navbar-brand {
+  color: black;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.navbar .navbar-brand:hover {
+  color: white;
+}
+
+.navbar a {
+  font-weight: 400;
+  font-size: 1.15em;
+  color: #ff970f;
+  color: black;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  margin: 3%;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper #startSinglePlayer {
+  width: 55vw;
+  margin-bottom: 2%;
+  background-color: #ff970f;
+  color: white;
+  border: none;
+  height: 7vh;
+}
+
+.wrapper #resetGame {
+  width: 55vw;
+  margin-bottom: 2%;
+  background-color: black;
+  color: white;
+  border: none;
+  height: 7vh;
+  text-align: center;
+  padding: 0.6%;
+}
+
+#pong {
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.leaderboard-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.leaderboard-wrapper .leaderboard {
+  height: 65vh;
+  width: 30vw;
+  -webkit-box-shadow: 0px 0px 15px 10px rgba(255, 151, 15, 0.75);
+          box-shadow: 0px 0px 15px 10px rgba(255, 151, 15, 0.75);
+}
+
+.user-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-wrapper .user-info {
+  border: 5px solid #ff970f;
+  width: 40vw;
+  height: 20vh;
+  padding: 1.7%;
+  margin-bottom: 5%;
+}
+
+.user-wrapper .user-info a {
+  text-decoration: underline;
+}
+
+.user-wrapper .user-info .username {
+  font-weight: 600;
+  color: black;
+}
+
+.user-wrapper .stats {
+  width: 40.5vw;
+  padding: 0;
+}
+
+.user-wrapper .stats #user-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user-wrapper .stats #user-stats .stat-rows {
+  -webkit-box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+          box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+  width: 11vw;
+  height: 30vh;
+  list-style-type: none;
+  margin: 1%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  color: #ff970f;
+}
+
+.user-wrapper .stats #user-stats .stat-rows .stat-text {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.user-wrapper .stats #user-stats .stat-rows .stats-numbers {
+  font-size: 5em;
+  font-weight: 600;
+}
+
+.instructions {
+  width: 50vw;
+  height: 50vh;
+  -webkit-box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+          box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+  margin: 0 auto;
+}
+
+.dashboard-links {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.dashboard-links .dashboard-btns {
+  border: none;
+  background-color: #ff970f;
+  padding: 1%;
+  min-width: 16vw;
+  height: 12vh;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

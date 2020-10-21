@@ -2,12 +2,13 @@ const canvas = document.getElementById("pong")
 const context = canvas.getContext("2d")
 
 // set up objects
+
 const net = {
     x: (canvas.width-2)/2,
     y: 0,
     width: 5,
     height: 30,
-    color: "WHITE"
+    color: "orange"
 }
 
 let player = {
@@ -37,7 +38,7 @@ let ball = {
     startAngle: 0, 
     endAngle: 2* Math.PI,
     color: "white",
-    speed: 5,
+    // speed: 5,
     velocityX: 5,
     velocityY: 5,
 
@@ -48,7 +49,9 @@ newY = -2
 
 
 
-// add mouse functionality
+
+
+// move mouse functionality
 document.addEventListener("mousemove", movePaddles, false)
 
 
@@ -88,7 +91,7 @@ const drawText = (x, y, text, color) => {
 function resetBall(){
     ball.x = canvas.width/2
     ball.y = canvas.height/2
-    ball.speed = 5
+    // ball.speed = 5
 }
 
 function collide (b, p) { //function to calculate if ball collides with 
@@ -106,21 +109,37 @@ function collide (b, p) { //function to calculate if ball collides with
     return b.right > p.left && b.top < p.bottom && b.left < p.right && b.bottom > p.top
 }
 
+// function speedUp(){
+//     if (Math.sign(newX) == 1) { // increase the speed of the ball 
+//         setInterval(newX += 0.1, 5000)
+//     } else if (Math.sign(newX) == -1){
+//         setInterval(newX -= 0.1, 5000)
+//     } 
+//     if (Math.sign(newY) == 1){
+//         setInterval(newY += 0.1, 5000)
+//     } else if (Math.sign(newY) == -1){
+//         setInterval(newY -= 0.1, 5000)
+//     } 
+// }
+
+
 
 function draw() { // draw function to render everything
     context.clearRect(0, 0, canvas.width, canvas.height) // continuously clear and update board
+    drawNet()
     drawCircle(ball.x, ball.y, ball.radius, ball.startAngle, ball.endAngle) // draw the ball
-    drawRectangle(player.x, player.y, player.width, player.height, "black") // draw player paddle
-    drawRectangle(com.x, com.y, com.width, com.height, "black") // draw com paddle
-    drawText(canvas.width/2/2, canvas.height/2/2, player.score, "black") //drae player score
-    drawText(canvas.width/1.5, canvas.height/2/2, com.score, "black") // draw com score
+    drawRectangle(player.x, player.y, player.width, player.height, "#ff970f") // draw player paddle
+    drawRectangle(com.x, com.y, com.width, com.height, "#ff970f") // draw com paddle
+    drawText(canvas.width/2/2, canvas.height/2/2, player.score, "#ff970f") //drae player score
+    drawText(canvas.width/1.5, canvas.height/2/2, com.score, "#ff970f") // draw com score
     
     ball.x += newX // move ball
     ball.y += newY // ^
 
-    let computerLevel = 0.03 // level of the computer AI - move down to slow it down or up to speed it up
+    let computerLevel = 0.05 // level of the computer AI - move down to slow it down or up to speed it up
     com.y += (ball.y - (com.y + com.height/2)) * computerLevel // movement of com paddle based on com level
-
+    
+    
     
 
 
@@ -133,7 +152,26 @@ function draw() { // draw function to render everything
 
 
     if (collide(ball, playerOrCom)){ // fucntion to change ball angle based on collision
+        // newY =- 0.1
         newX = -newX // turn ball direction around
+        computerLevel += 0.02
+        
+
+
+        // there is a slight glitch where the ball accidentally 
+        // bounces multiple times and the speed increases dramatically - need to fix 
+        if (Math.sign(newX) == 1) { // increase the speed of the ball 
+            newX += 0.02
+        } else if (Math.sign(newX) == -1){
+            newX -= 0.02
+        } 
+        if (Math.sign(newY) == 1){
+            newY += 0.02
+        } else if (Math.sign(newY) == -1){
+            newY -= 0.02
+        } 
+
+        
  
 
         // code from tutorial to change direction but dont think we really need it : 
@@ -151,12 +189,14 @@ function draw() { // draw function to render everything
 
     }
 
+    
+
     // increase scores and reset ball if ball goes out
     if (ball.x - ball.radius < 0){
         com.score++
         resetBall()
     } else if (ball.x + ball.radius > canvas.width){
-        console.log("hello")
+        // console.log("hello")
         player.score++
         resetBall()
     }
@@ -167,9 +207,30 @@ function draw() { // draw function to render everything
 
 
 
+const startButton = document.getElementById("startSinglePlayer")
+const resetButton = document.getElementById("resetGame")
+
+
+startButton.addEventListener("click", game)
+
+resetButton.addEventListener("click", resetGame)
+
 
 let frames = 10
 
+function game(){
+    resetButton.style = "display: block"
+    resetButton.style.cursor = "pointer"
+
+    setInterval(draw, frames)
+
+}
+
+function resetGame(){
+
+    location.reload()
+}
+
 // setInterval(speedIncrease, 3000)
-setInterval(draw, frames) //continuously render draw func
+// setInterval(draw, frames) //continuously render draw func
 

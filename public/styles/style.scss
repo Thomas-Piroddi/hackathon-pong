@@ -1,0 +1,198 @@
+a{
+    color: #ff970f;
+
+}
+
+.navbar{
+    background-color: rgba(255, 151, 15, 0.85);;
+    .navbar-brand{
+        // color: #f26e02;
+        color: black;
+        font-weight: 600;
+        font-size: 1.5em;
+
+        &:hover{
+            color: white;
+        }
+    }
+    a{
+        font-weight: 400;
+        font-size: 1.15em;
+        color: #ff970f;
+        color: black;
+        &:hover{
+            color: white;
+        }
+    }
+
+    // .disabled{
+    //     color: grey;
+
+    // }
+}
+
+
+// heading  ------------------------------------
+.heading{
+    text-align: center;
+    margin: 3%;
+}
+
+// single player ------------------------------------
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+
+    #startSinglePlayer{
+        width: 55vw;
+        margin-bottom: 2%;
+        background-color: #ff970f;
+        color: white;
+        border: none;
+        height: 7vh;
+        
+
+    }
+    #resetGame{
+        width: 55vw;
+        margin-bottom: 2%;
+        background-color: black;
+        color: white;
+        border: none;
+        height: 7vh;
+        text-align: center;
+        padding: 0.6%;
+
+    }
+}
+#pong{
+    margin:0 auto;
+    margin-bottom: 5%;
+}
+
+
+// leaderboard  ------------------------------------
+.leaderboard-wrapper{
+    display: flex;
+    justify-content: center;
+
+    .leaderboard{
+        height: 65vh;
+        width: 30vw;
+        box-shadow: 0px 0px 15px 10px rgba(255, 151, 15, 0.75);
+    }
+
+}
+
+
+// profile ------------------------------------
+.user-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .user-info{
+        // box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+        // background-color: #3d3d3d;
+        border: 5px solid #ff970f;
+        width: 40vw;
+        height: 20vh;
+        padding: 1.7%;
+        margin-bottom: 5%;
+        
+        a{
+            text-decoration: underline;
+        }
+        .username{
+            font-weight: 600;
+            color: black;
+
+        }
+        
+    }
+
+    .stats{
+        width: 40.5vw;
+        padding: 0;
+        #user-stats{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            justify-content: space-between;
+            
+
+            .stat-rows{
+                // background-color: #ff970f;
+                // background-color: black;
+                // box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+                width: 11vw;
+                height: 30vh;
+                list-style-type: none;
+                margin: 1%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                color: #ff970f;
+                
+
+
+                .stat-text{
+                    margin: 0;
+                    font-size: 1.25em;
+                    font-weight: 300;
+                }
+
+                .stats-numbers{
+                    font-size: 5em;
+                    font-weight: 600;
+                }
+                
+            }
+
+        }
+    }
+}
+
+
+// instructions
+.instructions{
+    width: 50vw;
+    height: 50vh;
+    box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+    margin: 0 auto;
+}
+
+// dashboard
+
+.dashboard-links{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    a{
+        
+    }
+
+
+
+    .dashboard-btns{
+        border: none;
+        background-color: #ff970f;
+        // margin: 0 auto;
+        padding: 1%;
+        min-width: 16vw;
+        height: 12vh;
+        // padding: 3%;
+        // padding-top: 3%;
+        color: white;
+        
+    }
+
+}
+
