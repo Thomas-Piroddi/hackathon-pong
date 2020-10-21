@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>halloween pong</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <style>
-        .login-form {
+body {
+    background-color: #f1820b;
+}
+
+.login-form {
 width: 300px;
 margin: 0 auto;
 font-family: Tahoma, Geneva, sans-serif;
@@ -35,9 +31,3 @@ cursor: pointer;
 font-weight: bold;
 color: #ffffff;
 }
-    </style>
-</head>
-<body>
-    {{{body}}}
-</body>
-</html>

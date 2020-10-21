@@ -22,7 +22,7 @@ const port = 3000
 
 
 
-const pageRouter = require('./routes/page_routes')
+const pageRouter = require('./routes/index')
 
 
 // connect to local database
