@@ -156,3 +156,41 @@ a{
         }
     }
 }
+
+
+// instructions
+.instructions{
+    width: 50vw;
+    height: 50vh;
+    box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
+    margin: 0 auto;
+}
+
+// dashboard
+
+.dashboard-links{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+
+
+    .dashboard-btns{
+        border: none;
+        background-color: #ff970f;
+        // margin: 0 auto;
+        padding: 1%;
+        min-width: 16vw;
+        height: 12vh;
+        // padding: 3%;
+        // padding-top: 3%;
+        a{
+            color: white;
+        }
+    }
+
+}
+
