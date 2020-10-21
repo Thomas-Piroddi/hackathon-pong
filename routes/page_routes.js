@@ -7,8 +7,11 @@ const {
     instructions,
     leaderboard,
     chat,
-    profile
+    profile,
+
 } = require('../controllers/page_controller')
+
+
 const router = express.Router()
 
 // home
