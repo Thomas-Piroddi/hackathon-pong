@@ -48,8 +48,8 @@ const io = socketio(server)
 
 
 
-app.use(express.static('public'))
-
+// app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 
 // connect to local database
 const dbConn = 'mongodb://localhost/hackathon_pong'
