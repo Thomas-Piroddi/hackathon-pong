@@ -175,6 +175,9 @@ a{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    a{
+        
+    }
 
 
 
@@ -187,9 +190,8 @@ a{
         height: 12vh;
         // padding: 3%;
         // padding-top: 3%;
-        a{
-            color: white;
-        }
+        color: white;
+        
     }
 
 }
