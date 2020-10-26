@@ -15,7 +15,7 @@ const {
 const router = express.Router()
 
 // home
-router.get("/", index)
+router.get("/", dashboard)
 
 // dashboard when logged in - needs authorization
 router.get("/dashboard", dashboard)
