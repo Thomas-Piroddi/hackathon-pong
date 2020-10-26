@@ -49,7 +49,7 @@ a {
 }
 
 .wrapper #startSinglePlayer {
-  width: 55vw;
+  width: 40vw;
   margin-bottom: 2%;
   background-color: #ff970f;
   color: white;
@@ -58,19 +58,21 @@ a {
 }
 
 .wrapper #resetGame {
-  width: 55vw;
+  width: 40vw;
   margin-bottom: 2%;
   background-color: black;
   color: white;
   border: none;
   height: 7vh;
   text-align: center;
-  padding: 0.6%;
+  padding: 1%;
 }
 
 #pong {
   margin: 0 auto;
   margin-bottom: 5%;
+  width: 40vw;
+  height: 50vh;
 }
 
 .leaderboard-wrapper {
@@ -104,8 +106,8 @@ a {
 
 .user-wrapper .user-info {
   border: 5px solid #ff970f;
-  width: 40vw;
-  height: 20vh;
+  width: 35.5vw;
+  height: 17vh;
   padding: 1.7%;
   margin-bottom: 5%;
 }
@@ -120,7 +122,7 @@ a {
 }
 
 .user-wrapper .stats {
-  width: 40.5vw;
+  width: 35vw;
   padding: 0;
 }
 
@@ -141,8 +143,8 @@ a {
 .user-wrapper .stats #user-stats .stat-rows {
   -webkit-box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
           box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
-  width: 11vw;
-  height: 30vh;
+  width: 10vw;
+  height: 23vh;
   list-style-type: none;
   margin: 1%;
   text-align: center;
@@ -177,14 +179,14 @@ a {
 }
 
 .dashboard-links {
-  width: 70vw;
+  width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -194,12 +196,17 @@ a {
   margin: 0 auto;
 }
 
+.dashboard-links a {
+  font-size: 1.5em;
+}
+
 .dashboard-links .dashboard-btns {
   border: none;
   background-color: #ff970f;
-  padding: 1%;
-  min-width: 16vw;
-  height: 12vh;
+  padding: 0.5%;
+  min-width: 20vw;
+  height: 10vh;
+  margin-bottom: 5%;
   color: white;
 }
 /*# sourceMappingURL=style.css.map */

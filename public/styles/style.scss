@@ -47,7 +47,7 @@ a{
     
 
     #startSinglePlayer{
-        width: 55vw;
+        width: 40vw;
         margin-bottom: 2%;
         background-color: #ff970f;
         color: white;
@@ -57,20 +57,22 @@ a{
 
     }
     #resetGame{
-        width: 55vw;
+        width: 40vw;
         margin-bottom: 2%;
         background-color: black;
         color: white;
         border: none;
         height: 7vh;
         text-align: center;
-        padding: 0.6%;
+        padding: 1%;
 
     }
 }
 #pong{
     margin:0 auto;
     margin-bottom: 5%;
+    width: 40vw;
+    height: 50vh;
 }
 
 
@@ -97,8 +99,8 @@ a{
         // box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
         // background-color: #3d3d3d;
         border: 5px solid #ff970f;
-        width: 40vw;
-        height: 20vh;
+        width: 35.5vw;
+        height: 17vh;
         padding: 1.7%;
         margin-bottom: 5%;
         
@@ -114,7 +116,7 @@ a{
     }
 
     .stats{
-        width: 40.5vw;
+        width: 35vw;
         padding: 0;
         #user-stats{
             display: flex;
@@ -128,8 +130,8 @@ a{
                 // background-color: black;
                 // box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
                 box-shadow: 0px 0px 20px 12px rgba(255, 151, 15, 0.75);
-                width: 11vw;
-                height: 30vh;
+                width: 10vw;
+                height: 23vh;
                 list-style-type: none;
                 margin: 1%;
                 text-align: center;
@@ -169,14 +171,15 @@ a{
 // dashboard
 
 .dashboard-links{
-    width: 70vw;
+    width: 90vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    
     a{
-        
+        font-size: 1.5em;
     }
 
 
@@ -185,9 +188,10 @@ a{
         border: none;
         background-color: #ff970f;
         // margin: 0 auto;
-        padding: 1%;
-        min-width: 16vw;
-        height: 12vh;
+        padding: 0.5%;
+        min-width: 20vw;
+        height: 10vh;
+        margin-bottom: 5%;
         // padding: 3%;
         // padding-top: 3%;
         color: white;

@@ -161,14 +161,14 @@ function draw() { // draw function to render everything
         // there is a slight glitch where the ball accidentally 
         // bounces multiple times and the speed increases dramatically - need to fix 
         if (Math.sign(newX) == 1) { // increase the speed of the ball 
-            newX += 0.02
+            newX += 0.05
         } else if (Math.sign(newX) == -1){
-            newX -= 0.02
+            newX -= 0.05
         } 
         if (Math.sign(newY) == 1){
-            newY += 0.02
+            newY += 0.05
         } else if (Math.sign(newY) == -1){
-            newY -= 0.02
+            newY -= 0.05
         } 
 
         
